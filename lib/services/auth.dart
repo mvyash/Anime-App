@@ -16,6 +16,8 @@ Future login(String userName, String password) async {
     }),
   );
 
+  print("everything is now working");
+
   if (response.statusCode != 200) {
     throw ErrorDescription("Error Detected!");
   }
