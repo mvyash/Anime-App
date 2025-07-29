@@ -200,7 +200,7 @@ class _HomeState extends State<Home> {
                                             animesInstances[sNo].ageRatingGuide,
                                         ratings:
                                             animesInstances[sNo].averageRating,
-                                        animeInstance: animesInstances[sNo],
+                                        animeID: animesInstances[sNo].id,
                                       ),
                                     )
                                     .toList(),
@@ -352,7 +352,7 @@ class _HomeState extends State<Home> {
                                             animesInstances[sNo].ageRatingGuide,
                                         ratings:
                                             animesInstances[sNo].averageRating,
-                                        animeInstance: animesInstances[sNo],
+                                        animeID: animesInstances[sNo].id,
                                       ),
                                     )
                                     .toList(),
@@ -450,7 +450,7 @@ class _HomeState extends State<Home> {
                                             animesInstances[sNo].ageRatingGuide,
                                         ratings:
                                             animesInstances[sNo].averageRating,
-                                        animeInstance: animesInstances[sNo],
+                                        animeID: animesInstances[sNo].id,
                                       ),
                                     )
                                     .toList(),

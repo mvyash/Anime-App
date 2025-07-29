@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:tamasha/ui/screens/anime.dart';
-import 'package:tamasha/models/animeModel.dart' as model;
 
-late model.Anime animeInfo;
+String animeId = "anime";
 
 class Banner extends StatelessWidget {
   late String imageUrl;
@@ -11,7 +9,7 @@ class Banner extends StatelessWidget {
   late String sNo;
   late String type;
   late String ratings;
-  late model.Anime animeInstance;
+  late String animeID;
 
   Banner({
     super.key,
@@ -20,7 +18,7 @@ class Banner extends StatelessWidget {
     required this.sNo,
     required this.type,
     required this.ratings,
-    required this.animeInstance,
+    required this.animeID,
   });
 
   @override
@@ -54,9 +52,8 @@ class Banner extends StatelessWidget {
                       overlayColor: Colors.transparent,
                     ),
                     onPressed: () {
-                      animeInfo = animeInstance;
-                      //Navigator.pushNamed(context, "/anime");
-                      GoRouter.of(context).push("/anime");
+                      animeId = animeID;
+                      GoRouter.of(context).push("/anime/$animeId");
                     },
                     child: Text(
                       maxLines: 1,

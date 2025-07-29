@@ -44,8 +44,6 @@ class _RankingState extends State<Ranking> {
                     List animesInstances = snapshot.data!;
                     for (int i = 0; i < 4; i++) {
                       offsetValues[i] = animesInstances[1][i];
-
-                      //print(offsetValues[i]);
                     }
                     animesInstances = animesInstances[0];
                     int instancesCount = animesInstances.length;
@@ -72,7 +70,7 @@ class _RankingState extends State<Ranking> {
                                 sNo: "0",
                                 type: animesInstances[index].ageRatingGuide,
                                 ratings: animesInstances[index].averageRating,
-                                animeInstance: animesInstances[index],
+                                animeID: animesInstances[index].id,
                               );
                             }),
                           ),

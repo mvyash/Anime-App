@@ -28,7 +28,6 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
             visible: backIconVisibility,
             child: IconButton(
               onPressed: () {
-                //Navigator.pop(context);
                 GoRouter.of(context).pop();
               },
               icon: Icon(Icons.arrow_back, size: 25),
@@ -46,7 +45,6 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
           TextButton(
             style: TextButton.styleFrom(overlayColor: Colors.transparent),
             onPressed: () {
-              //Navigator.pushNamed(context, "/category");
               GoRouter.of(context).push("/category");
             },
             child: Text(
@@ -58,7 +56,6 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
           TextButton(
             style: TextButton.styleFrom(overlayColor: Colors.transparent),
             onPressed: () {
-              //Navigator.pushNamed(context, "/rankings");
               GoRouter.of(context).push("/rankings");
             },
             child: Text(
@@ -80,7 +77,6 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
               ),
               child: TextButton(
                 onPressed: () {
-                  //Navigator.pushNamed(context, "/login");
                   GoRouter.of(context).push("/login");
                 },
                 child: Text("LOGIN", style: TextStyle(color: Colors.black)),
@@ -91,7 +87,6 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
               visible: searchIconVisibility ? true : false,
               child: IconButton(
                 onPressed: () {
-                  //Navigator.pushNamed(context, "/search");
                   GoRouter.of(context).push("/search");
                 },
                 icon: Icon(Icons.search),

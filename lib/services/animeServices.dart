@@ -135,3 +135,19 @@ Future<List> getSortedData(int limit, int offset, String sort) async {
 
   return returnValues;
 }
+
+Future getDataById(String id) async {
+  final url = Uri.https("kitsu.io", "/api/edge$id");
+  final response = await http.get(
+    url,
+    headers: {"Content-Type": "application/vnd.api+json"},
+  );
+
+  if (response.statusCode != 200) {
+    throw ErrorDescription("Unable to reach the server.");
+  }
+
+  final body = json.decode(response.body);
+
+  return Anime.createInstance(body["data"]);
+}
